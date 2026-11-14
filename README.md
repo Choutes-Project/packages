@@ -70,5 +70,6 @@ Each package carries the license of its contents. The Choutes Project packages a
 
 ---
 
-<sub>&copy; 2026 Choutes Project. All rights reserved.<br>
-The name and logo are trademarks. An independent project, not affiliated with Arch Linux.</sub>
+<sub>&copy; 2026 Choutes Project. The Choutes Project name, its logo, and its stick figure are trademarks of Choutes Project.<br>
+Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. Choutes Project is built on Arch Linux and is not affiliated with or endorsed by the Arch Linux project. KDE&reg; is a registered trademark of KDE e.V. Other names and logos belong to their owners.<br>
+Choutes Project is free and shows no advertising; it is kept alive by donations from its users. <a href="https://choutes.com/terms.html">Terms of Use</a> &middot; <a href="https://choutes.com/privacy.html">Privacy Policy</a> &middot; <a href="https://choutes.com/cookies.html">Cookie Policy</a></sub>

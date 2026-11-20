@@ -32,7 +32,7 @@ Server = https://github.com/Choutes-Project/packages/releases/download/repo-$arc
 
 Software checks this repository in the background and installs its updates together with the other system updates. A new version of `choutes-release` is a new version of Choutes Project.
 
-`choutes-plasma.json`, next to the database, names the KDE Plasma version that is released for Choutes Project. While the Arch Linux repositories have a newer Plasma that is still being tested, the system updates wait (at most 14 days) and only the Choutes Project packages are installed. `choutes-notes.json` holds the short notes that Software shows for each update.
+The packages of Arch Linux come from one fixed date of the Arch Linux Archive (`/etc/pacman.d/choutes-snapshot`, from `choutes-release`): a new version of `choutes-release` moves that date after it was tested, KDE Plasma included. `choutes-notes.json` holds the short notes that Software shows for each update, and `choutes-index.json` is the list of [packages.choutes.com](https://packages.choutes.com).
 
 ## Packages
 
@@ -44,12 +44,14 @@ Software checks this repository in the background and installs its updates toget
 | `choutes-wallpapers` | The Choutes Project wallpapers, each in a light and a dark version |
 | `choutes-plasma-theme` | The Choutes Dark and Choutes Light themes for KDE Plasma, the login screen, and the panel layout |
 | `choutes-settings` | Kernel and gaming tuning, zram, defaults, Fastfetch, diagnostics (`choutes-diag`), and the order of the repositories |
-| `choutes-app-base` | The shared parts of the Choutes Project applications, the KDE Plasma testing gate, and Reset System |
+| `choutes-app-base` | The shared parts of the Choutes Project applications, Game Center, Restore Points, System Health, Windows App Support, Kernel Manager, and Reset System |
 | `choutes-store` | Software: applications and games from Flathub and the AUR, and the updates of Choutes Project |
 | `choutes-driver-manager` | Drivers: drivers for graphics, Wi-Fi, printers, and processors |
 | `choutes-cleaner` | Cleaner: frees space, also by itself once a week |
 | `choutes-welcome` | Welcome: the first steps after the installation |
 | `choutes-calamares-config` | The configuration and artwork of the Choutes Project installer |
+| `linux-choutesproject` | The Choutes Project kernel, for processors with x86-64-v3 (with `linux-choutesproject-headers`) |
+| `linux-choutesproject-lts` | The Choutes Project LTS kernel, for all other processors (with `linux-choutesproject-lts-headers`) |
 | `plasma-setup` | The KDE first start wizard, with the Choutes Project look, that creates the first account |
 
 ## Signatures

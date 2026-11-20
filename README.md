@@ -52,6 +52,8 @@ The packages of Arch Linux come from one fixed date of the Arch Linux Archive (`
 | `choutes-calamares-config` | The configuration and artwork of the Choutes Project installer |
 | `linux-choutesproject` | The Choutes Project kernel, for processors with x86-64-v3 (with `linux-choutesproject-headers`) |
 | `linux-choutesproject-lts` | The Choutes Project LTS kernel, for all other processors (with `linux-choutesproject-lts-headers`) |
+| `linux-choutesproject` | The Choutes Project kernel, for processors with x86-64-v3 (with `linux-choutesproject-headers`) |
+| `linux-choutesproject-lts` | The Choutes Project LTS kernel, for all other processors (with `linux-choutesproject-lts-headers`) |
 | `plasma-setup` | The KDE first start wizard, with the Choutes Project look, that creates the first account |
 
 ## Signatures

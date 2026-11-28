@@ -4,21 +4,21 @@
 
 <p align="center">
   <a href="https://choutes.com"><b>Website</b></a> &nbsp;&middot;&nbsp;
-  <a href="https://packages.choutes.com"><b>Package server</b></a> &nbsp;&middot;&nbsp;
+  <a href="https://repo.choutes.com"><b>Package mirror</b></a> &nbsp;&middot;&nbsp;
   <a href="https://help.choutes.com"><b>Help Center</b></a> &nbsp;&middot;&nbsp;
   <a href="https://discord.gg/nYdsKv7Fra"><b>Discord</b></a>
 </p>
 
 # Choutes Project package repository
 
-The signed pacman repository of Choutes Project. Every installed system uses it automatically to receive new versions of the desktop, the applications, and the themes, together with the updates from the Arch Linux repositories. The packages that are published now are listed on [packages.choutes.com](https://packages.choutes.com).
+The signed pacman repository of Choutes Project. Every installed system uses it automatically to receive new versions of the desktop, the applications, and the themes, together with the updates from the Arch Linux repositories. The packages that are published now, and every file of the mirror, are listed on [repo.choutes.com](https://repo.choutes.com), with search and download.
 
 > [!IMPORTANT]
 > This repository is made for Choutes Project only. Do not add it to other Arch-based systems.
 
 ## How Choutes Project uses it
 
-The packages and the repository database are published in the [`repo-x86_64`](https://github.com/Choutes-Project/packages/releases/tag/repo-x86_64) release of this repository. Choutes Project reads the address from `/etc/pacman.d/choutes-mirrorlist`, which comes with the `choutes-release` package:
+The packages and the repository database are published on the Choutes Project mirror [repo.choutes.com](https://repo.choutes.com) and in the [`repo-x86_64`](https://github.com/Choutes-Project/packages/releases/tag/repo-x86_64) release of this repository, the fallback. Choutes Project reads the addresses from `/etc/pacman.d/choutes-mirrorlist`, which comes with the `choutes-release` package:
 
 ```ini
 # /etc/pacman.conf: the repository is moved before [core] by itself, so that a
@@ -27,12 +27,13 @@ The packages and the repository database are published in the [`repo-x86_64`](ht
 Include = /etc/pacman.d/choutes-mirrorlist
 
 # /etc/pacman.d/choutes-mirrorlist
+Server = https://repo.choutes.com/$arch
 Server = https://github.com/Choutes-Project/packages/releases/download/repo-$arch
 ```
 
 Software checks this repository in the background and installs its updates together with the other system updates. A new version of `choutes-release` is a new version of Choutes Project.
 
-The packages of Arch Linux come from one fixed date of the Arch Linux Archive (`/etc/pacman.d/choutes-snapshot`, from `choutes-release`): a new version of `choutes-release` moves that date after it was tested, KDE Plasma included. `choutes-notes.json` holds the short notes that Software shows for each update, and `choutes-index.json` is the list of [packages.choutes.com](https://packages.choutes.com).
+The packages of Arch Linux come from one fixed, tested date (`/etc/pacman.d/choutes-snapshot`, from `choutes-release`): first from the mirror (`https://repo.choutes.com/archive/repos/DATE/`), then from the Arch Linux Archive. A new version of `choutes-release` moves that date after it was tested, KDE Plasma included. `choutes-notes.json` holds the short notes that Software shows for each update, and `choutes-index.json` is the list of packages on [repo.choutes.com](https://repo.choutes.com).
 
 ## Packages
 
@@ -44,17 +45,15 @@ The packages of Arch Linux come from one fixed date of the Arch Linux Archive (`
 | `choutes-wallpapers` | The Choutes Project wallpapers, each in a light and a dark version |
 | `choutes-plasma-theme` | The Choutes Dark and Choutes Light themes for KDE Plasma, the login screen, and the panel layout |
 | `choutes-settings` | Kernel and gaming tuning, zram, defaults, Fastfetch, diagnostics (`choutes-diag`), and the order of the repositories |
-| `choutes-app-base` | The shared parts of the Choutes Project applications, Game Center, Restore Points, System Health, Windows App Support, Kernel Manager, and Reset System |
+| `choutes-app-base` | The shared parts of the Choutes Project applications, Game Center, Restore Points, System Health, Windows App Support, and Kernel Manager |
 | `choutes-store` | Software: applications and games from Flathub and the AUR, and the updates of Choutes Project |
 | `choutes-driver-manager` | Drivers: drivers for graphics, Wi-Fi, printers, and processors |
 | `choutes-cleaner` | Cleaner: frees space, also by itself once a week |
 | `choutes-welcome` | Welcome: the first steps after the installation |
-| `choutes-calamares-config` | The configuration and artwork of the Choutes Project installer |
+| `choutes-calamares-config` | The Choutes Project installer: its pages (also the kernel, the boot loader, and the applications), artwork, and the online installation |
 | `linux-choutesproject` | The Choutes Project kernel, for processors with x86-64-v3 (with `linux-choutesproject-headers`) |
-| `linux-choutesproject-lts` | The Choutes Project LTS kernel, for all other processors (with `linux-choutesproject-lts-headers`) |
-| `linux-choutesproject` | The Choutes Project kernel, for processors with x86-64-v3 (with `linux-choutesproject-headers`) |
-| `linux-choutesproject-lts` | The Choutes Project LTS kernel, for all other processors (with `linux-choutesproject-lts-headers`) |
-| `plasma-setup` | The KDE first start wizard, with the Choutes Project look, that creates the first account |
+| `linux-choutesproject-lts` | The Choutes Project LTS kernel, for every processor (with `linux-choutesproject-lts-headers`) |
+| `plasma-setup` | The first start of Choutes Project (the KDE first start wizard with the Choutes Project look and pages): the account, Gaming, Daily Use, or Both, the look, the picture, and the clock |
 
 ## Signatures
 
